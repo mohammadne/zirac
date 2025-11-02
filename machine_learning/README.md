@@ -25,6 +25,11 @@ NumPy, pandas, scikit-learn
   - [intro to ML](https://developers.google.com/machine-learning/intro-to-ml)
   - [ML Crash Course](https://developers.google.com/machine-learning/crash-course)
 
+- [deeplearning-ai ML](https://learn.deeplearning.ai/specializations/machine-learning)
+  - [Supervised Machine Learning: Regression and Classification]
+  - [Advanced Learning Algorithms]
+  - [Unsupervised Learning, Recommenders, Reinforcement Learning]
+
 - Hands-On Machine Learning with Scikit-Learn, Keras & TensorFlow
 - Artificial Intelligence A Modern Approach [4 ed. GLOBAL] - Stuart J. Russell, Peter Norvig
 - [Quick Hands-On](https://www.youtube.com/user/joshstarmer)
@@ -37,7 +42,6 @@ NumPy, pandas, scikit-learn
 - Deep Learning with Python (Manning)
 - The Hundred-Page Language Models Book
 - Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow by Geron Aurelien
-- https://www.coursera.org/specializations/machine-learning-introduction
-- https://www.coursera.org/specializations/deep-learning
+
 - Algorithms for optimization
 - https://ocw.sharif.ir/course/id/545

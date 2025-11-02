@@ -1,6 +1,7 @@
 # Mathematics
 
-- Mathematics for Machine Learning
+- Mathematics for Machine Learning Book
+- [Mathematics for Machine Learning and Data Science Specialization](https://www.deeplearning.ai/courses/mathematics-for-machine-learning-and-data-science-specialization)
 
 ## Calculus
 
@@ -32,6 +33,7 @@ Distributions (Normal, Bernoulli, etc.)
 Bayes theorem
 Likelihood, entropy
 
+- [statistics](https://www.youtube.com/playlist?list=PLblh5JKOoLUK0FLuzwntyYI10UQFUhsY9)
 - [probability course](https://www.probabilitycourse.com/)
 - https://www.khanacademy.org/math/statistics-probability
 
