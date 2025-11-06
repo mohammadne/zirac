@@ -11,7 +11,12 @@ def compute_cost(x: NDArray[np.float64], y: NDArray[np.float64], w: float, b: fl
     return result / (2 * m)
 
 
-def compute_gradient(x: NDArray[np.float64], y: NDArray[np.float64], w: float, b: float):
+def compute_gradient(
+    x: NDArray[np.float64],
+    y: NDArray[np.float64],
+    w: float,
+    b: float,
+) -> tuple[float, float]:
     m: int = x.shape[0]
 
     # gradient_w = 0
@@ -24,6 +29,7 @@ def compute_gradient(x: NDArray[np.float64], y: NDArray[np.float64], w: float, b
     #     gradient_b += (w*x[i] + b) - y[i]
     # gradient_b /= m
 
+    # using vectorization
     error = (w * x + b) - y
     gradient_w = np.dot(error, x) / m
     gradient_b = np.sum(error) / m
