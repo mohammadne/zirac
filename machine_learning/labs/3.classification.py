@@ -1,4 +1,5 @@
 import math
+import time
 
 import matplotlib.pyplot as plt
 import numpy as np
@@ -67,19 +68,25 @@ def gradient_descent(
 
 
 if __name__ == "__main__":
-    x_train = np.array([[0.5, 1.5], [1, 1], [1.5, 0.5], [3, 1], [
-                       2, 2], [1, 3]], dtype=np.float64)
-    y_train = np.array([0, 0, 0, 1, 1, 1], dtype=np.float64)
+    data = np.loadtxt("./data/100_classification_samples.csv",
+                      delimiter=",", skiprows=1)
+
+    # Split features (x) and labels (y)
+    x_train = data[:, :2]   # all rows, first 2 columns
+    y_train = data[:, 2]    # all rows, 3rd column
     learning_rate = 5.0e-2
     threshold = 1e-5
 
+    start = time.time()
     w, b, iterations, history = gradient_descent(
         x_train, y_train, learning_rate, threshold, max_iterations=1000000)
+    end = time.time()
+    print(f"Training time: {end - start:.6f} seconds")
     print(
         f"w: {w}\nb: {b}\niterations: {iterations}\nlast_cost: {history[-1][-1]}")
 
     for i in range(len(y_train)):
-        prediction = np.dot(x_train[i], w)+b
+        prediction = np.dot(x_train[i], w)+b > 0
         print(f"actual: {y_train[i]}, predicted: {prediction}")
 
     def plot_classification(ax, x, y, w, b):
