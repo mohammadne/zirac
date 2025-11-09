@@ -30,6 +30,9 @@ NumPy, pandas, scikit-learn
   - [Advanced Learning Algorithms]
   - [Unsupervised Learning, Recommenders, Reinforcement Learning]
 
+- [ML roadmap](https://roadmap.sh/machine-learning)
+- [AI roadmap](https://roadmap.sh/ai-engineer)
+
 - Hands-On Machine Learning with Scikit-Learn, Keras & TensorFlow
 - Artificial Intelligence A Modern Approach [4 ed. GLOBAL] - Stuart J. Russell, Peter Norvig
 - [Quick Hands-On](https://www.youtube.com/user/joshstarmer)
