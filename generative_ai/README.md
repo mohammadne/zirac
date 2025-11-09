@@ -9,5 +9,6 @@ Fine-tuning vs LoRA vs RAG (Retrieval-Augmented Generation)
 Diffusion models (e.g., Stable Diffusion)
 Embeddings, tokenization, vector databases (FAISS, Chroma, Pinecone)
 
+- https://huggingface.co/learn/llm-course/chapter1/1
 - Build a Large Language Model (From Scratch)
 - https://github.com/omid-moradi/llm-course-with-roadmaps-
