@@ -139,9 +139,9 @@ def multi_class_classification():
     This function has a beautiful intuition -)))
     the first layer has 3 neurons (units) which intutively are the 3 lines that seperates the points
     the output of first layer is a0, a1 and a2
-        a0 -> for class 0, 1 and 2 is zero and for class 3, 4 and 5 is their z (w1.x + b1)
-        a1 -> for class 0 and 1 is zero and for class 2, 3, 4 and 5 is their y (w2.x + b2)
-        a2 -> for class 0, 1, 2 and 3 is zero and for class 4 and 5 is their y (w3.x + b3)
+        a0 (vertical line) -> for class 0, 2 and 4 is zero and for class 1, 3 and 5 is their z (w1.x + b1)
+        a1 (horizontal line 1) -> for class 0 and 1 is zero and for class 2, 3, 4 and 5 is their y (w2.x + b2)
+        a2 (horizontal line 2) -> for class 0, 1, 2 and 3 is zero and for class 4 and 5 is their y (w3.x + b3)
             it means by W and b, the z for class 0 is a = [0, 0, 0] and
             for an example in class 3 -> a = [11.124, 34.534, 0]
     in the second linear layer we use SparseCategoricalCrossentropy in 4 neurons
@@ -151,17 +151,15 @@ def multi_class_classification():
 
     # make 6-class dataset for classification
     X_train, y_train = make_blobs(
-        centers=[[-5, 2], [-2, -2], [1, 2], [4, -2], [7, 2], [10, -2]],
         n_samples=200, cluster_std=0.8, random_state=20,
+        centers=np.array([[-5, 2], [-2, -2], [1, 2],
+                         [4, -2], [7, 2], [10, -2]]),
     )
 
     plt_mc(X_train, y_train)
 
-    # show classes in data set
     print(f"unique classes {np.unique(y_train)}")
-    # show how classes are represented
-    print(f"class representation {y_train[:10]}")
-    # show shapes of our dataset
+    print(f"10 class representation {y_train[:10]}")
     print(
         f"shape of X_train: {X_train.shape}, shape of y_train: {y_train.shape}")
 
