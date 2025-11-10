@@ -18,3 +18,4 @@ Google Colab for free GPU compute
 - https://www.coursera.org/specializations/deep-learning
 - Dive into Deep Learning (free online book) – https://d2l.ai
 - https://ocw.sharif.ir/course/id/532
+- http://neuralnetworksanddeeplearning.com/index.html
