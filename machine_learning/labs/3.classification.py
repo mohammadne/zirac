@@ -72,8 +72,8 @@ if __name__ == "__main__":
                       delimiter=",", skiprows=1)
 
     # Split features (x) and labels (y)
-    x_train = data[:, :2]   # all rows, first 2 columns
-    y_train = data[:, 2]    # all rows, 3rd column
+    x_train = data[:, :-1]   # all rows, first 2 columns
+    y_train = data[:, -1]    # all rows, 3rd column
     learning_rate = 5.0e-2
     threshold = 1e-5
 

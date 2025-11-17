@@ -36,15 +36,19 @@ def coffee_roasting():
 
     print(X.shape, Y.shape)
 
-    print("pre normalization")
-    print(f"T Max, Min: {np.max(X[:, 0]):0.2f}, {np.min(X[:, 0]):0.2f}")
-    print(f"D Max, Min: {np.max(X[:, 1]):0.2f}, {np.min(X[:, 1]):0.2f}")
+    print(f"""
+    pre normalization:
+    Temperature Max, Min: {np.max(X[:, 0]):0.2f}, {np.min(X[:, 0]):0.2f}
+    Duration Max, Min: {np.max(X[:, 1]):0.2f}, {np.min(X[:, 1]):0.2f}
+    """)
     norm_l = tf.keras.layers.Normalization(axis=-1)
     norm_l.adapt(X)  # learns mean, variance
     Xn = norm_l(X)
-    print("post normalization")
-    print(f"T Max, Min: {np.max(Xn[:, 0]):0.2f}, {np.min(Xn[:, 0]):0.2f}")
-    print(f"D Max, Min: {np.max(Xn[:, 1]):0.2f}, {np.min(Xn[:, 1]):0.2f}")
+    print(f"""
+    post normalization:
+    Temperature Max, Min: {np.max(Xn[:, 0]):0.2f}, {np.min(Xn[:, 0]):0.2f}
+    Duration Max, Min: {np.max(Xn[:, 1]):0.2f}, {np.min(Xn[:, 1]):0.2f}
+    """)
 
     Xt = np.tile(Xn, (1000, 1))
     Yt = np.tile(Y, (1000, 1))

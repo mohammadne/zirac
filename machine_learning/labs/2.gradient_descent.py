@@ -37,8 +37,8 @@ def compute_gradient(
 
 
 def gradient_descent(
-    x: NDArray,
-    y: NDArray[np.float64],
+    x: NDArray,  # shape (m, n)
+    y: NDArray[np.float64],  # shape (m,)
     learning_rate: float,
     threshold: float,
     max_iterations: int = 10000
